@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./App.scss";
 import Box from "./Box.jsx";
 import { nanoid } from "nanoid";
+import Confetti from 'react-confetti'
 
 export default function App() {
   const [numbers, setNumbers] = React.useState(generateNumbers());
@@ -9,6 +10,7 @@ export default function App() {
   const [timer, setTimer] = useState(30);
   const [isLost, setIsLost] = useState(false);
   const [isStared, setIsStarted] = useState(false);
+
 
   function generateNumbers() {
     const nums = [];
@@ -103,11 +105,15 @@ export default function App() {
     setIsWon(false);
     setIsLost(false);
   }
-  let isDisabled;
 
+ 
   return (
     <>
       <h1 className="title">Make all numbers equal</h1>
+      {isWon && <Confetti
+      width={window.innerWidth}
+      height={window.innerHeight}
+    />}
       <p className="isntructions">
         You can click a box to lock it's value and click Change Numbers to
         generate new values.

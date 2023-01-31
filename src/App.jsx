@@ -111,7 +111,7 @@ export default function App() {
         generate new values.
       </p>
       {!isWon && timer >= 0 && <h3 className="timer">Timer: {timer}</h3>}
-      <div className="box-container">{elements}</div>
+      <div className="box-container">{isStared? elements : ""}</div>
       {isWon && <h1 className="win">You've won!</h1>}
       {isLost && <h1 className="win">You've lost!</h1>}
       { !isWon && !isLost && isStared &&

@@ -100,6 +100,8 @@ export default function App() {
   }
   function start() {
     setIsStarted(true);
+    setIsWon(false);
+    setIsLost(false);
   }
   let isDisabled;
 
@@ -111,7 +113,7 @@ export default function App() {
         generate new values.
       </p>
       {!isWon && timer >= 0 && <h3 className="timer">Timer: {timer}</h3>}
-      <div className="box-container">{isStared? elements : ""}</div>
+      <div className="box-container">{isStared || isWon? elements : ""}</div>
       {isWon && <h1 className="win">You've won!</h1>}
       {isLost && <h1 className="win">You've lost!</h1>}
       { !isWon && !isLost && isStared &&

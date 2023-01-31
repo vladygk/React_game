@@ -3,15 +3,23 @@ import React from "react";
 export default function Box(props) {
   
 
-  const color = { backgroundColor: props.on ? "white" : "black" };
+  let className;
+  if(props.victory){
+    className = "win-box";
+  }else if(props.locked){
+    className = "box locked";
+  }else if(!props.locked){
+    className = "box";
+  }
+ 
 
   return (
     <>
       <div
-        className="box"
-        style={color}
-        onClick={props.clickHandler}
-      ></div>
+        className={className}
+        
+        onClick={()=>props.clickHandler(props.id)}
+      >{props.value}</div>
     </>
   );
 }

@@ -5,18 +5,88 @@
     border-radius: 10px;
     align-self: center;
     justify-self: center;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    
+    cursor: pointer;
 }
-
+.win{
+    color: white;
+    font-size: 50px;
+    justify-items: center;
+    margin: 0;
+}
+.locked{
+    background-color: white ;
+    color: black;
+}
+.box:hover{
+    box-shadow: 2px 4px 4px black;
+}
 .box-container{
     display: grid;
     grid-template-columns: 30px 30px 30px;
-    grid-template-rows: 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px ;
     gap: 10rem;
 
-    width:100vw;
-    height:100vh;
+    width:auto;
+    height:60vh;
     background-color: blue;
     
     justify-content: center;
     align-content: center;
+}
+
+.btn{
+   width:30vw;
+   height: 5vh;
+   align-self: center;
+   border-radius: 10px;
+   border-style: none;
+   background-color: aqua;
+   font-size: 25px;
+   cursor: pointer;
+   box-shadow: 0px 2px 2px black;
+   margin: 5px;
+}
+.btn:hover{
+    background-color: grey;
+    box-shadow: 2px 4px 4px black;
+}
+
+.btn-won{
+    width:30vw;
+    height: 5vh;
+    align-self: center;
+    border-radius: 10px;
+    border-style: none;
+    background-color: grey;
+    font-size: 25px;
+}
+.win-box{
+    width: 8rem;
+    height: 8rem;
+    background-color: red;
+    color: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+.title{
+    color: white;
+    font-size: 50px;
+}
+.isntructions{
+    color:white;
+    font-size: 25px;
+}
+.timer{
+    color: white;
+    font-size: 20px;
 }

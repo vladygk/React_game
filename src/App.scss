@@ -1,0 +1,22 @@
+.box{
+    width: 8rem;
+    height: 8rem;
+    background-color: black;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+}
+
+.box-container{
+    display: grid;
+    grid-template-columns: 30px 30px 30px;
+    grid-template-rows: 30px 30px 30px;
+    gap: 10rem;
+
+    width:100vw;
+    height:100vh;
+    background-color: blue;
+    
+    justify-content: center;
+    align-content: center;
+}
